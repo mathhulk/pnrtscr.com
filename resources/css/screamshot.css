@@ -1,0 +1,97 @@
+.section-hero {
+	height: 100vh;
+}
+
+.navbar-brand {
+	text-transform: none;
+	font-weight: bold;
+	font-size: 22px;
+	letter-spacing: -1px;
+}
+
+.btn {
+	letter-spacing: 0;
+}
+
+.section-shaped .shape-style-1 span {
+	height: 0 !important;
+	width: 0 !important;
+	background: transparent !important;
+	border-radius: 0;
+}
+
+.section-shaped .shape-style-1 :nth-child(1) {
+	border-top: 20vw solid rgba(255, 255, 255, 0.15);
+	border-right: 16vw solid transparent;
+	border-left: 16vw solid transparent;
+	top: calc(100vh - 100px);
+	left: -5vw;
+}
+
+.section-shaped .shape-style-1 :nth-child(2) {
+	left: 6vw;
+	top: 20vh;
+	border-top: 5vw solid rgba(255, 255, 255, 0.1);
+	border-right: 4vw solid transparent;
+	border-left: 4vw solid transparent;
+}
+
+.section-shaped .shape-style-1 :nth-child(3) {
+	border-top: 9vw solid rgba(255, 255, 255, 0.2);
+	border-right: 7vw solid transparent;
+	border-left: 7vw solid transparent;
+	left: 10vw;
+	top: 37vh;
+}
+
+.section-shaped .shape-style-1 :nth-child(4) {
+	top: -200px;
+	left: 25vw;
+	border-top: 20vw solid rgba(255, 255, 255, 0.2);
+	border-right: 16vw solid transparent;
+	border-left: 16vw solid transparent;
+}
+
+.section-shaped .shape-style-1 :nth-child(5) {
+	top: 50vh;
+	left: calc(100vw - 100px);
+	border-top: 20vw solid rgba(255, 255, 255, 0.15);
+	border-right: 16vw solid transparent;
+	border-left: 16vw solid transparent;
+}
+
+.section-shaped .shape-style-1 :nth-child(6) {
+	border-top: 9vw solid rgba(255, 255, 255, 0.1);
+	border-right: 7vw solid transparent;
+	border-left: 7vw solid transparent;
+	left: 80vw;
+	top: 32vh;
+}
+
+.section-shaped .shape-style-1 :nth-child(7) {
+	left: 70vw;
+	top: 45vh;
+	border-top: 5vw solid rgba(255, 255, 255, 0.2);
+	border-right: 4vw solid transparent;
+	border-left: 4vw solid transparent;
+}
+
+.section-shaped .shape-style-1.shape-primary {
+	background: #E44D26;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #F16529, #E44D26);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #F16529, #E44D26); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	overflow: hidden;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover, .navbar-transparent .navbar-brand {
+	color: white;
+}
+
+:focus, button:focus {
+	outline: none;
+}
+
+.btn-inner--icon i:not(.fa) {
+	top: 0;
+}
