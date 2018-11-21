@@ -45,7 +45,7 @@
 }
 
 .section-shaped .shape-style-1 :nth-child(4) {
-	top: -200px;
+	top: -14vw;
 	left: 25vw;
 	border-top: 20vw solid rgba(255, 255, 255, 0.2);
 	border-right: 16vw solid transparent;
