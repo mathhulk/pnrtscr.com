@@ -13,6 +13,10 @@
 	letter-spacing: 0;
 }
 
+.form-control, .btn {
+	border-radius: 3px;
+}
+
 .section-shaped .shape-style-1 span {
 	height: 0 !important;
 	width: 0 !important;
