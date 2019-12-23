@@ -1,5 +1,8 @@
 RewriteEngine on
 
+RewriteCond %{HTTP_HOST} www.pnrtscr.com
+RewriteRule (.*) https://pnrtscr.com/$1 [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule .* scare.php
