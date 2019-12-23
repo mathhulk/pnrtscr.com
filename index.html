@@ -110,6 +110,16 @@
 		<script type="text/javascript" src="resources/javascript/bootstrap.min.js"><!-- script --></script>
 		<script type="text/javascript" src="resources/javascript/argon.min.js"><!-- script --></script>
 		
-		<script type="text/javascript" src="resources/javascript/screamshot.js"><!-- script --></script>
+		<script type="text/javascript">
+		$(document).ready(function( ) {
+			new ClipboardJS(".copy");
+			
+			$("input").val( "https://pnrtscr.com/" + Math.random( ).toString(36).substr(2, 6) );
+			
+			$(document).on("click", ".generate", function( ) {
+				$("input").val( "https://pnrtscr.com/" + Math.random( ).toString(36).substr(2, 6) );
+			});
+		});
+		</script>
 	</body>
 </html>

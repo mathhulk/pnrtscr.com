@@ -70,20 +70,6 @@
 				top: 0;
 			}
 			
-			.advertisement_bottom {
-				width: 100vw;
-				bottom: 0;
-				left: 0;
-				position: fixed;
-			}
-			
-			.advertisement_top {
-				width: 100vw;
-				top: 0;
-				left: 0;
-				position: fixed;
-			}
-			
 			.audio {
 				visibility: hidden;
 			}
@@ -95,36 +81,6 @@
 	</head>
 	<body>		
 		<video id="scare" src="resources/video/scare.mp4" muted autoplay loop><!-- scare --></video>
-		
-		<div class="advertisement_top">
-			<center>
-				<script type="text/javascript">
-					atOptions = {
-						'key' : 'd1130d16025c692639b0b43693db6f76',
-						'format' : 'iframe',
-						'height' : 60,
-						'width' : 468,
-						'params' : {}
-					};
-					document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.bcloudhost.com/d1130d16025c692639b0b43693db6f76/invoke.js"></scr' + 'ipt>');
-				</script>
-			</center>
-		</div>
-		
-		<div class="advertisement_bottom">
-			<center>
-				<script type="text/javascript">
-					atOptions = {
-						'key' : '2563761e22d44b7a18c6ff96ac924d1e',
-						'format' : 'iframe',
-						'height' : 90,
-						'width' : 728,
-						'params' : {}
-					};
-					document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.bcloudhost.com/2563761e22d44b7a18c6ff96ac924d1e/invoke.js"></scr' + 'ipt>');
-				</script>
-			</center>
-		</div>
 		
 		<iframe class="audio" src="resources/audio/silence.mp3" allow="autoplay">
 			<!-- fake interaction -->
