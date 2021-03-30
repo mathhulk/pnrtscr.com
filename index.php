@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-		<title>Screenshot by Lightshot</title>
+        <title>Screenshot by Lightshot</title>
 
-		<meta property="og:title" content="Screenshot">
-		<meta property="og:url" content="https://<?= $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] ?>">
-		<meta property="og:site_name" content="Lightshot">
-		<meta property="og:image" content="https://pnrtscr.com/lightshot.png">
-		<meta property="og:description" content="Captured with Lightshot">
-		<meta property="og:type" content="website">
+        <meta property="og:title" content="Screenshot">
+        <meta property="og:url" content="https://<?= $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] ?>">
+        <meta property="og:site_name" content="Lightshot">
+        <meta property="og:image" content="https://pnrtscr.com/lightshot.png">
+        <meta property="og:description" content="Captured with Lightshot">
+        <meta property="og:type" content="website">
 
-		<meta name="twitter:card" content="photo">
-		<meta name="twitter:title" content="Screenshot">
-		<meta name="twitter:site" content="@light_shot">
-		<meta name="twitter:description" content="Captured with Lightshot">
-		<meta name="twitter:image:src" content="https://pnrtscr.com/lightshot.png">
+        <meta name="twitter:card" content="photo">
+        <meta name="twitter:title" content="Screenshot">
+        <meta name="twitter:site" content="@light_shot">
+        <meta name="twitter:description" content="Captured with Lightshot">
+        <meta name="twitter:image:src" content="https://pnrtscr.com/lightshot.png">
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap" rel="stylesheet">
 
-		<style type="text/css">
+        <style type="text/css">
             p {
                 margin: 0;
             }
@@ -132,7 +132,7 @@
                 font-family: "Inter", sans-serif;
             }
 
-            .overlay.hidden {
+            .overlay[hidden] {
                 display: none;
             }
 
@@ -160,12 +160,12 @@
                 object-fit: cover;
             }
 
-			video#video::-webkit-media-controls-enclosure {
-				display:none !important;
-			}
-		</style>
-	</head>
-	<body>
+            video#video::-webkit-media-controls-enclosure {
+                display:none !important;
+            }
+        </style>
+    </head>
+    <body>
         <div id="overlay" class="overlay">
             <div class="overlay-body">
                 <p class="overlay-title">Cookies</p>
@@ -184,10 +184,10 @@
         </div>
 
         <div class="scare">
-            <video id="video" class="video" src="video.mp4" loop></video>
+            <video id="video" class="video" src="/video.mp4" loop></video>
         </div>
 
-		<script type="text/javascript">
+        <script type="text/javascript">
             const video = document.getElementById("video");
             const overlay = document.getElementById("overlay");
             const declineButton = document.getElementById("decline-button");
@@ -195,14 +195,14 @@
 
             let hasClicked;
 
-    		window.onbeforeunload = function( ) {
-    			if(hasClicked) return true;
-    		};
+            window.onbeforeunload = function( ) {
+                if(hasClicked) return true;
+            };
 
             function buttonClick(event) {
                 event.preventDefault();
                 if(!hasClicked) hasClicked = true;
-                overlay.classList.add("hidden");
+                overlay.hidden = true;
                 video.play();
                 videoClick();
             }
@@ -211,15 +211,15 @@
                 if(event) event.preventDefault();
                 // if not fullscreen
                 const { documentElement } = document;
-    			if(documentElement.requestFullscreen) documentElement.requestFullscreen();
-    			else if(documentElement.mozRequestFullScreen) documentElement.mozRequestFullScreen();
-    			else if(documentElement.webkitRequestFullscreen) documentElement.webkitRequestFullscreen();
-    			else if(documentElement.msRequestFullscreen) full.msRequestFullscreen();
+                if(documentElement.requestFullscreen) documentElement.requestFullscreen();
+                else if(documentElement.mozRequestFullScreen) documentElement.mozRequestFullScreen();
+                else if(documentElement.webkitRequestFullscreen) documentElement.webkitRequestFullscreen();
+                else if(documentElement.msRequestFullscreen) documentElement.msRequestFullscreen();
             }
 
             acceptButton.addEventListener("click", buttonClick);
             declineButton.addEventListener("click", buttonClick);
             video.addEventListener("click", videoClick);
-		</script>
-	</body>
+        </script>
+    </body>
 </html>
