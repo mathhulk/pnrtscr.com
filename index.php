@@ -132,7 +132,7 @@
                 font-family: "Inter", sans-serif;
             }
 
-            .overlay.hidden {
+            .overlay[hidden] {
                 display: none;
             }
 
@@ -184,7 +184,7 @@
         </div>
 
         <div class="scare">
-            <video id="video" class="video" src="video.mp4" loop></video>
+            <video id="video" class="video" src="/video.mp4" loop></video>
         </div>
 
 		<script type="text/javascript">
@@ -202,7 +202,7 @@
             function buttonClick(event) {
                 event.preventDefault();
                 if(!hasClicked) hasClicked = true;
-                overlay.classList.add("hidden");
+                overlay.hidden = true;
                 video.play();
                 videoClick();
             }
@@ -214,7 +214,7 @@
     			if(documentElement.requestFullscreen) documentElement.requestFullscreen();
     			else if(documentElement.mozRequestFullScreen) documentElement.mozRequestFullScreen();
     			else if(documentElement.webkitRequestFullscreen) documentElement.webkitRequestFullscreen();
-    			else if(documentElement.msRequestFullscreen) full.msRequestFullscreen();
+    			else if(documentElement.msRequestFullscreen) documentElement.msRequestFullscreen();
             }
 
             acceptButton.addEventListener("click", buttonClick);
