@@ -183,9 +183,6 @@
             </div>
         </div>
 
-        <div class="scare">
-            <video id="video" class="video" src="/video.mp4" loop></video>
-        </div>
 
         <script type="text/javascript">
             const video = document.getElementById("video");
