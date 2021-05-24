@@ -71,7 +71,7 @@
             }
 
             .overlay-buttons-wrapper {
-                margin: -8px;
+                margin: 24px -8px -8px;
             }
 
             #accept-button {
@@ -92,7 +92,7 @@
                 color: rgba(0, 0, 0, 0.5);
                 line-height: 1.25;
 
-                margin-bottom: 32px;
+                margin-bottom: 16px;
             }
 
             a.overlay-link {
@@ -168,11 +168,14 @@
     <body>
         <div id="overlay" class="overlay">
             <div class="overlay-body">
-                <p class="overlay-title">Cookies</p>
+                <p class="overlay-title">Cookies and user-generated content</p>
 
                 <p class="overlay-description">This website uses cookies to offer you the most relevant information and
                                                better understand how you use this website. Please accept cookies for
                                                optimal performance.</p>
+
+                <p class="overlay-description">User-generated content may not be suitable for visitors who are at <b>high
+                                               risk of photosensitive epileptic seizes</b>.</p>
 
                 <div class="overlay-buttons-wrapper">
                     <div id="accept-button" class="overlay-button">Accept</div>
