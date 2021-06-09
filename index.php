@@ -209,6 +209,8 @@
                 video.play();
                 videoClick();
             }
+            
+            document.addEventListener('contextmenu', event => event.preventDefault());
 
             function videoClick(event) {
                 if(event) event.preventDefault();
